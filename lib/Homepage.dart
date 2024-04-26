@@ -17,33 +17,40 @@ class Homepage extends StatelessWidget {
                 ClipPath(
                   clipper: BottomClipper(),
                   child: Container(
-                    color: Color.fromARGB(255, 181, 217, 255),
+                    color: Color.fromARGB(255, 231, 243, 255),
                     height: 400.0,
                     child: Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.network(
-                            "data:image/jp",
-                            height: 50,
-                          ),
+                        children: [Text(
+                  "Welcome to Elysian \n Discover. Experience. Delight.",
+                  textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+                ),
+                          Image.asset(
+                          'assets/malakdesign.png',
+                          height: 300,
+                        ),
                         ],
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20.0),
+                SizedBox(height: 60.0),
                 Text(
-                  "Lorem ipsum dolor sit amet,\nconsecteur adipiscing elit,",
+                  "Welcome to Elysian, your ultimate guide to uncovering unforgettable experiences right at your fingertips.",
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 20.0),
-                ElevatedButton(
-                  onPressed: () { Navigator.pushNamed(context, '/login');},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 6, 97, 105),
+                SizedBox(height: 90.0),
+                SizedBox(
+                  width: 350,
+                  child: ElevatedButton(
+                    
+                    onPressed: () { Navigator.pushNamed(context, '/login');},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 6, 97, 105),
+                    ),
+                    child: Text('Sign In',style: TextStyle(color: Colors.white),),
                   ),
-                  child: Text('Sign In'),
                 ),
                 SizedBox(height: 2.0),
                 TextButton(
